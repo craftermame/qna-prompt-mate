@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="craftermame">
+  <meta name="keywords" content="cheating, automation, lazy">
+  <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./style.css">
+  <title>Prompt Mate for Q&A</title>
+</head>
+<body>
+  <header class="fc">
+    <h1>Prompt Mate for Q&A</h1>
+  </header>
+  <div class="main-container">
+    <div>
+      <h2>Step1.</h2>
+      <p>あなたの学生情報を入力してください。</p>
+      <div class="fc">
+        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <label for="student-id">学籍番号：</label>
+            <input type="text" name="student-id" id="student-id">
+          </div>
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <label for="student-name">名　　前：</label>
+            <input type="text" name="student-name" id="student-name">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2>Step2.</h2>
+      <p>今回の授業に関する次の情報を入力してください。</p>
+      <p>授業のキーワードは5つ以上が望ましいです。</p>
+      <div style="display: flex; flex-direction: column; gap: 1rem;">
+        <div>
+          <label for="theme" style="display: block;">授業のテーマ</label>
+          <input
+            type="text"
+            name="theme"
+            id="theme"
+            placeholder="AIの歴史"
+            style="max-width: 300px; width: 100%; box-sizing: border-box;"
+          >
+        </div>
+        <div>
+          <label for="keywords" style="display: block;">授業のキーワード</label>
+          <textarea
+            name="keywords"
+            id="keywords"
+            rows="5"
+            placeholder="強いAI、弱いAI、チューリングテスト、ニューラルネットワーク、チェスでプロに勝利..."
+            style="width: 100%; box-sizing: border-box; resize: none;"
+          ></textarea>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2>Step3.</h2>
+      <p>下のボタンからプロンプトをコピー&ペーストして、ChatGPTに尋ねましょう。以下のような10セットのQ&Aが出力されます。</p>
+      <div class="fc" style="flex-direction: column; align-items: center;">
+        <button id="copy-qa-prompt" class="btn">プロンプトをコピーする</button>
+        <img src="./assets/qa_response_sample.png" alt="A sample of ChatGPT's response.">
+      </div>
+    </div>
+    <div>
+      <h2>Step4.</h2>
+      <p>自然なQ&Aになるように、ChatGPTの回答を調整します。（任意）</p>
+    </div>
+    <div>
+      <h2>Step5.</h2>
+      <p>つぎのプロンプトをコピー&ペーストして、ChatGPTに尋ねましょう。以下のように、JSONと呼ばれるフォーマットで出力されます。</p>
+      <div class="fc" style="flex-direction: column; align-items: center;">
+        <button id="copy-jsonify-prompt" class="btn">プロンプトをコピーする</button>
+        <img src="./assets/json_response_sample.png" alt="A sample of ChatGPT's response.">
+      </div>
+    </div>
+    <div>
+      <h2>Step6.</h2>
+      <p>出力されたJSONをコピーして、こちらにペーストします。ChatGPTのコピーボタンからコピーできます。</p>
+      <div>
+        <label for="qa-json" style="display: block;">JSONをペースト</label>
+        <textarea
+          name="json"
+          id="qa-json"
+          rows="25"
+          placeholder=""
+          style="width: 100%; box-sizing: border-box; resize: none; font-family: Menlo;"
+        ></textarea>
+      </div>
+    </div>
+    <div>
+      <h2>Step7.</h2>
+      <p>お疲れ様でした。下のボタンからテキストファイルをダウンロードできます。</p>
+      <div class="fc" style="margin-top: 24px;">
+        <button id="download" class="gen-btn">
+          ダウンロード
+          <span class="gradient-container">
+            <span class="gradient"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <footer style="text-align: center; margin-top: 2rem; padding: 1rem 0; color: #777; border-top: 1px solid #aaa;">
+    <p style="font-family: Menlo;">
+      Made with ❤️ by 
+      <a href="https://github.com/craftermame" target="_blank" style="color: #0d6efd; text-decoration: none;">
+        @craftermame
+      </a>
+       (GitHub)
+    </p>
+    <p>&copy; 2025 craftermame. MIT Licensed</p>
+  </footer>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
