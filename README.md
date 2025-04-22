@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD033 -->
 
-# PromptMate for Q&A
+# Prompt Mate for Q&A
 
 > ⚠️ **Note** 👩‍🎓  
 > I made this app to help with the homework of a university class.  
