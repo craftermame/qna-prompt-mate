@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD033 -->
 
 # PromptMate for Q&A
 
@@ -13,6 +14,14 @@
   - Fine-tune ChatGPT’s responses to make them more natural!
   - You can mention specific part of the response by selecting text (a feature of ChatGPT).
 - Download a submission-ready file, so you can submit it DIRECTORY!
+
+## Recommended Usage
+
+You can split your window with this app on one side and ChatGPT on the other.
+
+Here is the example.
+
+<img src="./assets/usage_sample.png" alt="Recommended usage" height="600" />
 
 ## Release Note
 
