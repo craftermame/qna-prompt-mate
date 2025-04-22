@@ -21,7 +21,7 @@ You can split your window with this app on one side and ChatGPT on the other.
 
 Here is the example.
 
-<img src="./assets/usage_sample.png" alt="Recommended usage" height="600" />
+<img src="./assets/usage_sample.png" alt="Recommended usage" />
 
 ## Release Note
 
