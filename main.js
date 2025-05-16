@@ -19,7 +19,7 @@ document.getElementById('qa-json').placeholder = JSON_SAMPLE
 Click Event:
   Copy the prompt that generate Q&A pairs by click button.
   The value `theme` is required.
-  The value `keywords` is reqired unless keyword generation is selected.
+  The value `keywords` is reqired if keyword generation is not selected.
 */
 const copyQaPrompt = document.getElementById('copy-qa-prompt')
 copyQaPrompt.addEventListener('click', () => {
