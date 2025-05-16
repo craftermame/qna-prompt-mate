@@ -18,12 +18,17 @@ document.getElementById('qa-json').placeholder = JSON_SAMPLE
 /*
 Click Event:
   Copy the prompt that generate Q&A pairs by click button.
+  The value `theme` is required.
+  The value `keywords` is reqired unless keyword generation is selected.
 */
 const copyQaPrompt = document.getElementById('copy-qa-prompt')
 copyQaPrompt.addEventListener('click', () => {
   const theme = document.getElementById('theme').value
+  if (!theme) { alert('授業のテーマを入力してください。'); return; }
   const keywords = document.getElementById('keywords').value
-  const prompt = GENERATE_QA(theme, keywords)
+  const isKwGenerator = !!document.getElementById('generate-keywords').checked
+  if (!keywords && !isKwGenerator) { alert('授業のキーワードを入力してください。'); return; }
+  const prompt = GENERATE_QA(theme, keywords, isKwGenerator)
   navigator.clipboard.writeText(prompt).then(() => {
     copyQaPrompt.innerText = 'コピーしました'
     console.log('Copied', prompt)
