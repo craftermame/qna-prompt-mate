@@ -1,5 +1,5 @@
 
-export function GENERATE_QA(theme, keywords) {
+export function GENERATE_QA(theme, keywords, isKwGenerator) {
     
     return `「AI基礎」という授業の課題を手伝ってください。
 この授業の概要: 数理・データサイエンス・AIの基礎は，今後のデジタル社会の基礎知識として不可欠なものである．本授業では，このうちのAIの基礎に関して，AIの歴史，知覚・知能処理の基礎，機械学習・深層学習・生成AIの基礎と応用，AIの構築・運用と展望，AIと社会の係わり等に関して学習する．
@@ -55,6 +55,8 @@ ${theme}
 
 授業のキーワード:
 ${keywords}
+
+${isKwGenerator ? `ただし、授業のキーワードが不十分な場合は、授業のテーマ（${theme}）を参考にして、あたらしくキーワード考えてもよいです。` : ''}
 
 この情報をもとに、一問一答の問答を10セット作成してください。`
 }
