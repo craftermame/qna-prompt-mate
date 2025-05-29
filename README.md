@@ -2,7 +2,7 @@
 
 # Prompt Mate for Q&A
 
-> ⚠️ **Note** 👩‍🎓  
+> [!WARNING]
 > I made this app to help with the homework of a university class.  
 > So, this app may not be useful unless you're taking the class 🏫.
 
