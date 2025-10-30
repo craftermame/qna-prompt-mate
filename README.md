@@ -6,6 +6,10 @@
 > I made this app to help with the homework of a university class.  
 > So, this app may not be useful unless you're taking the class 🏫.
 
+## App Link
+
+https://craftermame.github.io/qna-prompt-mate/
+
 ## 💫 Main Features
 
 - Complete your **AI Foundation** class homework in just 5 minutes!!!
